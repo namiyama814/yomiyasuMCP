@@ -1,0 +1,16 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "yomiyasu-mcp",
+  "version": "0.1.0",
+  "description": "日本語の推敲と機械検査",
+  "license": "MIT",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "yomiyasu",
+        "shortDescription": "日本語を推敲する",
+        "defaultPrompt": "次の文章をyomiyasuで推敲してください。get_instructionsから始め、checkとverifyまで実行してください。"
+      }
+    }
+  }
+}

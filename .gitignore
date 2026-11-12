@@ -1,0 +1,14 @@
+node_modules/
+.wrangler/
+.dev.vars
+.env
+.venv/
+__pycache__/
+*.pyc
+src/generated.ts
+checker/src/vendor_data.py
+
+.venv-workers/
+python_modules/
+
+dist/

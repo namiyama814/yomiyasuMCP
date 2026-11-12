@@ -1,0 +1,8 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "yomiyasu-mcp",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-11-12",
+  "services": [{"binding":"CHECKER", "service":"yomiyasu-checker"}],
+  "observability": {"enabled":false}
+}

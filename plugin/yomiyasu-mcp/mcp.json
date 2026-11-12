@@ -1,0 +1,16 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "yomiyasu": {
+      "type": "streamable-http",
+      "url": "https://yomiyasu-mcp.namiyama814.workers.dev/mcp",
+      "extensions": {
+        "com.openai": {
+          "auth": {
+            "type": "none"
+          }
+        }
+      }
+    }
+  }
+}

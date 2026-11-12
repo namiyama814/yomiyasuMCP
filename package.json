@@ -1,0 +1,30 @@
+{
+  "name": "yomiyasu-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prepare:data": "python3 scripts/prepare_data.py",
+    "dev": "wrangler dev",
+    "dev:checker": "npm run prepare:data && cd checker && uv run pywrangler dev --port 8788",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run prepare:data && tsx --test tests/*.test.ts && python3 -m unittest discover -s tests -p 'test_*.py'",
+    "deploy:checker": "npm run prepare:data && cd checker && uv run pywrangler deploy",
+    "deploy": "npm run prepare:data && wrangler deploy",
+    "test:integration": "tsx scripts/smoke.ts",
+    "prepare": "python3 scripts/prepare_data.py"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "2.4.0",
+    "agents": "0.33.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "latest",
+    "@modelcontextprotocol/client": "2.4.0",
+    "@types/node": "^26.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^6.0.0",
+    "wrangler": "4.160.1"
+  }
+}
